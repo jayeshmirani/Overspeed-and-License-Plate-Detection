@@ -3,7 +3,7 @@
 ## Weights
 - Weights/best.pt : for Vehicle Detection
 - Weights/bestLP.pt : for License Plate Detection
-- Weights/roboflow_last.pt : for License Plate Recognition
+- Weights/roboflow_last.pt : for License Plate Recognition 
 
 ## Code
 
@@ -20,8 +20,7 @@ At end of track.py, following code is present, which creates a asynchronous proc
 cmd_lp = 'python3 ./yolov5/tempLP.py ' + dir_path + ' ' + str(output[4])  + ' ' + str(cars_dic[output[4]][3])  + ' ' + str(cars_dic[output[4]][4])  + ' ' + str(cars_dic[output[4]][5]) + ' ' + str(cars_dic[output[4]][7]) + ' ' + str(next_entry_index)
 os.system(f'start cmd /c {cmd_lp}')
 
-### License Plate Detection
-#### tempLP.py
+### License Plate Detection : tempLP.py (i.e detect.py file of YOLOv5 LPD model)
 - YOLOv5: Extracts license plate from snapshots of vehicle
 - Save 10 snapshots of license plates for each vehicle
 
@@ -30,8 +29,7 @@ correct_license_plate_no =  runOCR(source=dir_path_label, weights="./yolov5/robo
 
 - Add vehicle start frame, end frame, speed and license plate number in excel sheet
 
-### License Plate Recognition
-#### tempOCR.py
+### License Plate Recognition : tempOCR.py (i.e detect.py file of YOLOv5 LPR model)
 - Apply Optical-Character-Recognition on extracted license plate
 - YOLOv5 model: for detection of 36 classes; 26 characters from A-Z and 10 digits from 0-9. 
 - return license plate no. to tempLP
