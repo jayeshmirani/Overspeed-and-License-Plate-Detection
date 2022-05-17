@@ -25,6 +25,7 @@ os.system(f'start cmd /c {cmd_lp}')
 - Save 10 snapshots of license plates for each vehicle
 
 At the end of tempLP.py file, for each license plate snapshot, the following code is ran(which calls tempOCR.py) and we get the correct license plate:
+
 correct_license_plate_no =  runOCR(source=dir_path_label, weights="./yolov5/roboflow_last.pt")
 
 - Add vehicle start frame, end frame, speed and license plate number in excel sheet
