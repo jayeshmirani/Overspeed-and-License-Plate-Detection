@@ -1,7 +1,9 @@
-# Weights used for 3 yolo models copied inside Weights folder
-Weights/best.pt : for Vehicle Detection
-Weights/bestLP.pt : for License Plate Detection
-Weights/roboflow_last.pt : for License Plate Recognition
+# Vehicle Overspeed Detection and Automatic License Plate Recognition
+
+#### Weights
+- Weights/best.pt : for Vehicle Detection
+- Weights/bestLP.pt : for License Plate Detection
+- Weights/roboflow_last.pt : for License Plate Recognition
 
 # Code
 
